@@ -29,6 +29,6 @@ jobs:
       - name: pm2 install
         run: npm install pm2 -g
       - name: Deploy application
-        run: |
-          pm2 delete server || true
-          pm2 start "npm start" --name="server"
+        run: pm2 start "npm start" --name="server"
+      - name: pm2 status
+        run: pm2 status   
