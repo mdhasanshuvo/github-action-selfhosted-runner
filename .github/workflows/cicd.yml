@@ -31,4 +31,4 @@ jobs:
       - name: Deploy application
         run: |
           pm2 delete server || true
-          pm2 start server.js --name "server"
+          pm2 start "npm start" --name="server"
